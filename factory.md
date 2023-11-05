@@ -90,3 +90,49 @@ echo processarDocumento($fabricaWord) . "\n";       // Saída: "Lendo texto do W
 ```
 
 Este exemplo demonstra como o Factory Method pode ser aplicado para criar leitores de documentos específicos, dependendo do tipo de documento que você precisa processar, mantendo a flexibilidade para adicionar novos tipos de leitores no futuro.
+
+```mermaid
+    classDiagram
+
+    interface LeitorDocumento {
+    +ler(): string
+    }
+
+    class LeitorExcel implements LeitorDocumento {
+    +ler(): string
+    }
+
+    class LeitorPowerPoint implements LeitorDocumento {
+    +ler(): string
+    }
+
+    class LeitorWord implements LeitorDocumento {
+    +ler(): string
+    }
+
+    interface FabricaLeitorDocumento {
+    +criarLeitor(): LeitorDocumento
+    }
+
+    class FabricaLeitorExcel implements FabricaLeitorDocumento {
+    +criarLeitor(): LeitorExcel
+    }
+
+    class FabricaLeitorPowerPoint implements FabricaLeitorDocumento {
+    +criarLeitor(): LeitorPowerPoint
+    }
+
+    class FabricaLeitorWord implements FabricaLeitorDocumento {
+    +criarLeitor(): LeitorWord
+    }
+
+    class Cliente {
+    +processarDocumento(FabricaLeitorDocumento): string
+    }
+
+    Cliente --> FabricaLeitorDocumento
+    FabricaLeitorDocumento --> "1" LeitorDocumento
+    FabricaLeitorDocumento <|-- "1" FabricaLeitorExcel
+    FabricaLeitorDocumento <|-- "1" FabricaLeitorPowerPoint
+    FabricaLeitorDocumento <|-- "1" FabricaLeitorWord
+```
