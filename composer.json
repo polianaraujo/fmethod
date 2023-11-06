@@ -1,0 +1,17 @@
+{
+    "name": "raphaelrds/fmethod",
+    "autoload": {
+        "psr-4": {
+            "Raphaelrds\\Fmethod\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Raphael Ramos",
+            "email": "raphaelramos@geowellex.com"
+        }
+    ],
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.29"
+    }
+}
