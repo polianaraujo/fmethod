@@ -1,8 +1,8 @@
 <?php
 
-require 'NoFm.php';
+require 'WithFm.php';
 
-use classes\NoFm\{
+use classes\WithFm\{
     Documento,
     DocumentoXlsx,
     DocumentoCsv
@@ -16,4 +16,6 @@ class Aplicacao {
 
 $app = new Aplicacao;
 
-$app::run(new DocumentoXlsx("data/dados.xlsx"));
+$app::run(new DocumentoCsv("data/dados.csv"));
+
+// $app::run(new DocumentoXlsx("data/dados.xlsx"));
