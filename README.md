@@ -94,6 +94,8 @@ classDiagram
         + criarLeitor()* : Produto
     }
 
+    <<abstract>> Documento
+
     class DocumentoXlsx {
         ...
         +criarLeitor() : LeitorXlsx
