@@ -1,10 +1,11 @@
 <?php
 
-require 'WithFm.php';
+require 'NoFm.php';
 
-use classes\WithFm\{
+use classes\NoFm\{
     Documento,
-    DocumentoXlsx
+    DocumentoXlsx,
+    DocumentoCsv
 };
 
 class Aplicacao {
