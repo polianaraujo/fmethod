@@ -91,7 +91,7 @@ classDiagram
     class Documento {
         - caminho : String
         + cabecalho() : Array
-        + criarLeitor()* : Produto
+        + criarLeitor()* : Leitor
     }
 
     <<abstract>> Documento

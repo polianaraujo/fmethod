@@ -16,6 +16,6 @@ class Aplicacao {
 
 $app = new Aplicacao;
 
-$app::run(new DocumentoCsv("data/dados.csv"));
+// $app::run(new DocumentoCsv("data/dados.csv"));
 
-// $app::run(new DocumentoXlsx("data/dados.xlsx"));
+$app::run(new DocumentoXlsx("data/dados.xlsx"));
